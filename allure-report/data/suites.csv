@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jul 24 23:35:43 IST 2024","Wed Jul 24 23:35:45 IST 2024","1569","Default Suite","OrangeHRProject","tests.LoginTest","tests.LoginTest","testVWOLogin_Positive","testVWOLogin_Positive","Verify the Valid Credentials are working fine"
+"passed","Wed Jul 24 23:35:41 IST 2024","Wed Jul 24 23:35:43 IST 2024","2145","Default Suite","OrangeHRProject","tests.LoginTest","tests.LoginTest","testLogin_negative","testLogin_negative","Verify the Valid Credentials are working fine"
