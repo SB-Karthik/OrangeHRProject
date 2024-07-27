@@ -42,4 +42,10 @@ public class LoginPage extends BasePage {
         return new DashboardPage();
     }
 
+    public AddEmployee addEmployee(){
+        return new AddEmployee();
+    }
+
+
+
 }

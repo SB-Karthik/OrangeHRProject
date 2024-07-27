@@ -20,7 +20,7 @@ public class LoginTest extends TestBase {
 
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify the Valid Credentials are working fine")
-    @Test(groups = {"negative", "P0"}, priority = 1)
+    @Test(groups = {"QA"}, priority = 1)
     public void testLogin_negative(Method method) throws Exception {
         DriverManagerTL.getDriver().get(PropetyReader.readKey("url"));
         String expectedResult = new LoginPage().loginHRM(false).errorMessage();
