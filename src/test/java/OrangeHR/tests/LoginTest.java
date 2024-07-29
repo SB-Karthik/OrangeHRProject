@@ -3,7 +3,7 @@ package OrangeHR.tests;
 import com.OrangeHR.driver.DriverManagerTL;
 import com.OrangeHR.pages.DashboardPage;
 import com.OrangeHR.pages.LoginPage;
-import com.OrangeHR.utils.PropetyReader;
+import com.OrangeHR.utils.PropertyReader;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -22,7 +22,7 @@ public class LoginTest extends TestBase {
     @Description("Verify the Valid Credentials are working fine")
     @Test(groups = {"QA"}, priority = 1)
     public void testLogin_negative(Method method) throws Exception {
-        DriverManagerTL.getDriver().get(PropetyReader.readKey("url"));
+        DriverManagerTL.getDriver().get(PropertyReader.readKey("url"));
         String expectedResult = new LoginPage().loginHRM(false).errorMessage();
 
         if (expectedResult.equalsIgnoreCase(expectedResult)) {
@@ -30,7 +30,7 @@ public class LoginTest extends TestBase {
             takeScreenShot(method.getName(),DriverManagerTL.getDriver());
         }
         Assertions.assertThat(expectedResult)
-                .isNotBlank().isNotNull().contains(PropetyReader.readKey("expected_error"));
+                .isNotBlank().isNotNull().contains(PropertyReader.readKey("expected_error"));
     }
 
 
@@ -38,11 +38,11 @@ public class LoginTest extends TestBase {
     @Description("Verify the Valid Credentials are working fine")
     @Test(groups = {"positive","P0"},priority = 2)
     public void testLogin_positive() throws Exception {
-        DriverManagerTL.getDriver().get(PropetyReader.readKey("url"));
+        DriverManagerTL.getDriver().get(PropertyReader.readKey("url"));
         DashboardPage dashboardPage = new LoginPage().loginHRM(true).afterLogin();
         String expectedResult = dashboardPage.loggedInUserName();
         Assertions.assertThat(expectedResult)
-                .isNotBlank().isNotNull().contains(PropetyReader.readKey("expected_username"));
+                .isNotBlank().isNotNull().contains(PropertyReader.readKey("expected_username"));
     }
 
 }

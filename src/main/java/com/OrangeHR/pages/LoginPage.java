@@ -2,14 +2,13 @@ package com.OrangeHR.pages;
 
 import com.OrangeHR.base.BasePage;
 import com.OrangeHR.driver.DriverManagerTL;
-import com.OrangeHR.utils.PropetyReader;
+import com.OrangeHR.utils.PropertyReader;
 import org.openqa.selenium.By;
 
 
 public class LoginPage extends BasePage {
     public LoginPage(){
         super();
-
     }
 
     private final By username = (By.name("username"));
@@ -21,19 +20,19 @@ public class LoginPage extends BasePage {
     public LoginPage loginHRM(boolean invalid) throws Exception {
         if (!invalid){
             presenceOfElement(username);
-            enterInput(username, PropetyReader.readKey("invalid_username"));
+            enterInput(username, PropertyReader.readKey("invalid_username"));
         }else {
             elementToBeClickable(login_cta);
-            enterInput(username, PropetyReader.readKey("username"));
+            enterInput(username, PropertyReader.readKey("username"));
         }
 
-        enterInput(password, PropetyReader.readKey("password"));
-//        elementToBeClickable(login_cta);
+        enterInput(password, PropertyReader.readKey("password"));
+        elementToBeClickable(login_cta);
         clickElement(login_cta);
         return this;
     }
 
-    public String errorMessage() throws InterruptedException {
+    public String errorMessage() {
         visibilityOfElementLocated(error_message);
         return DriverManagerTL.getDriver().findElement(error_message).getText();
     }

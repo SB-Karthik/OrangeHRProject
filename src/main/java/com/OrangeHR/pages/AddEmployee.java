@@ -3,8 +3,10 @@ package com.OrangeHR.pages;
 import com.OrangeHR.base.BasePage;
 import org.openqa.selenium.By;
 
+
 public class AddEmployee extends BasePage {
     public AddEmployee(){
+
     }
 
     private final By add_button = By.xpath("//button[normalize-space()='Add']");

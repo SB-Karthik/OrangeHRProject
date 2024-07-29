@@ -14,7 +14,7 @@ public class BasePage {
     }
 
     protected void implicitWait(){
-        DriverManagerTL.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));    // 10, TimeUnit.SECONDS
+        DriverManagerTL.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     protected void enterInput(By by, String key){

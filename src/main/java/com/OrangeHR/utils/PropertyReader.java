@@ -8,8 +8,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
-public class PropetyReader {
-    PropetyReader(){
+public class PropertyReader {
+    PropertyReader(){
 
     }
 

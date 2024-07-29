@@ -6,20 +6,21 @@ import com.OrangeHR.driver.DriverManagerTL;
 import com.OrangeHR.pages.AddEmployee;
 import com.OrangeHR.pages.DashboardPage;
 import com.OrangeHR.pages.LoginPage;
-import com.OrangeHR.utils.PropetyReader;
+import com.OrangeHR.utils.PropertyReader;
 import org.testng.annotations.Test;
 
 public class AddEmployTest extends TestBase {
 
-    @Test
+    @Test(priority = 1)
     public void testAdd_employ() throws Exception {
-        DriverManagerTL.getDriver().get(PropetyReader.readKey("url"));
-        new LoginPage().loginHRM(true).addEmployee().addDetails();
-    }
+        DriverManagerTL.getDriver().get(PropertyReader.readKey("url"));
+        AddEmployee addEmployee = new LoginPage().loginHRM(true).addEmployee().addDetails();
 
-    @Test
+    }
+    @Test(priority = 2)
     public void deleteEmployee() throws Exception {
-        DriverManagerTL.getDriver().get(PropetyReader.readKey("url"));
-        DashboardPage dashboardPage = new LoginPage().loginHRM(true).afterLogin().deleteEmploy();
+        DriverManagerTL.getDriver().get(PropertyReader.readKey("url"));
+        DashboardPage deleted = new LoginPage().loginHRM(true).afterLogin().deleteEmploy();
+
     }
 }
