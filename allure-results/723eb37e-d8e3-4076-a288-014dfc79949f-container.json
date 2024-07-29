@@ -1,0 +1,1 @@
+{"uuid":"723eb37e-d8e3-4076-a288-014dfc79949f","name":"OrangeHR.tests.LoginTest","children":["212d3aaa-a266-4197-bd73-4c6cdcbba4e0"],"befores":[{"name":"clear","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1722252813124,"stop":1722252813125}],"afters":[],"start":1722252813116,"stop":1722252813165}

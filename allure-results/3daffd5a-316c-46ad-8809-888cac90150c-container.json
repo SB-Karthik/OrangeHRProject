@@ -1,0 +1,1 @@
+{"uuid":"3daffd5a-316c-46ad-8809-888cac90150c","name":"OrangeHR.tests.AddEmployTest","children":["8eb84a5a-d146-4399-aa9b-7a55ff98d96b"],"befores":[],"afters":[{"name":"clear","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1722252905518,"stop":1722252905518}],"start":1722252896206,"stop":1722252905523}
